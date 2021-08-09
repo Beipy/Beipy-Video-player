@@ -12,6 +12,9 @@
 			<div class="beipy-video-content">
 
 				<video id="Beipy-video">您的浏览器不支持本视频播放，请尽快升级</video>
+				<div class="beipy-video-logo">
+					视频logo
+				</div>
 				<!-- 视频控制中心 -->
 				<div class="beipy-video-controls">
 					<!-- 控制背景遮罩 -->
@@ -317,7 +320,7 @@
 			var video = document.getElementById('Beipy-video');
 			var hls = new Hls();
 			if (Hls.isSupported()) {
-				hls.loadSource('http://ivi.bupt.edu.cn/hls/cctv6hd.m3u8');
+				hls.loadSource('https://video.dious.cc/20200620/0uUgAqHZ/index.m3u8');
 				hls.attachMedia(video);
 				// console.log(hls)
 				//  hls.on(Hls.Events.MANIFEST_PARSED,function() {
