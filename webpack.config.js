@@ -10,19 +10,18 @@
  * @Date: 2021-08-09 17:32:09
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/webpack.config.js
- * @LastEditTime: 2021-08-09 18:20:31
+ * @LastEditTime: 2021-08-11 10:54:39
  */
 // resolve用来拼接绝对路径的方法
 const { resolve } = require('path')
 
 module.exports = {
   mode: "development",
-  
   module: {
     rules: [
        {
         // 匹配哪些文件
-        test: /\.scss$/,
+        test: /\.s[ac]ss$/i,
         // 使用哪些loader进行处理
         use: [
           // use数组中loader执行顺序：从右到左，从下到上，依次执行(先执行css-loader)
@@ -31,7 +30,7 @@ module.exports = {
           // css-loader：将css文件变成commonjs模块加载到js中，里面内容是样式字符串
           'css-loader',
           // scss-loader：将scss文件编译成css文件，需要下载scss-loader和scss
-          'scss-loader'
+          'sass-loader'
         ],
       },
       {
@@ -62,16 +61,16 @@ module.exports = {
         loader: 'html-loader',
       },
        // 打包其他资源(除了html/js/css资源以外的资源)
-      {
-        // 排除html|js|css|less|jpg|png|gif文件
-        exclude: /\.(html|js|css|less|jpg|png|gif)/,
-        // file-loader：处理其他文件
-        loader: 'file-loader',
-        options: {
-          name: '[hash:10].[ext]',
-          outputPath: 'media',
-        },
-      },
+      // {
+      //   // 排除html|js|css|less|jpg|png|gif文件
+      //   exclude: /\.(html|js|css|less|jpg|png|gif)/,
+      //   // file-loader：处理其他文件
+      //   loader: 'file-loader',
+      //   options: {
+      //     name: '[hash:10].[ext]',
+      //     outputPath: 'media',
+      //   },
+      // },
     ]
   },
    devServer: {
