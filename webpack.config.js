@@ -10,11 +10,13 @@
  * @Date: 2021-08-09 17:32:09
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/webpack.config.js
- * @LastEditTime: 2021-08-20 12:30:59
+ * @LastEditTime: 2021-08-20 17:21:30
  */
 // resolve用来拼接绝对路径的方法
 const { resolve } = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+let styleVariables = require("./src/css/variables.js");
+
 module.exports = {
   mode: "development",
   entry: "./src/index.js",
@@ -34,7 +36,15 @@ module.exports = {
           // css-loader：将css文件变成commonjs模块加载到js中，里面内容是样式字符串
           "css-loader",
           // scss-loader：将scss文件编译成css文件，需要下载scss-loader和scss
-          "sass-loader",
+          // "sass-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              additionalData: Object.keys(styleVariables)
+                .map((k) => `\$${k}: ${styleVariables[k]};`)
+                .join("\n"),
+            },
+          },
         ],
       },
       {
@@ -83,6 +93,7 @@ module.exports = {
     contentBase: resolve(__dirname, "dist"),
     // 启动gzip压缩
     compress: true,
+
     // 端口号
     port: 3550,
     host: "localhost",

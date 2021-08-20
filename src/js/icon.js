@@ -10,10 +10,8 @@
  * @Date: 2021-08-19 14:54:20
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/js/icon.js
- * @LastEditTime: 2021-08-20 12:22:28
+ * @LastEditTime: 2021-08-20 15:34:48
  */
-
-//
 
 const videoIcon = {
   play: {

@@ -10,27 +10,12 @@
  * @Date: 2021-08-09 17:42:06
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/index.js
- * @LastEditTime: 2021-08-20 12:24:29
+ * @LastEditTime: 2021-08-20 17:29:42
  */
-//
-import "./css/beipy-video.scss";
-import VideoIcon from "./js/icon";
+import "./css/index.scss";
 
-const test = () => {
-  console.log("执行Icon渲染 ", VideoIcon);
+// 查看所有的icon图标
+import seeIcon from "./js/seeIcon.js";
 
-  let data = "";
-  for (const key in VideoIcon) {
-    data =
-      data +
-      '<div style="text-align: center; padding: 10px;display: inline-block;"> <div>' +
-      VideoIcon[key].InitHtml +
-      "</div> <p>" +
-      VideoIcon[key].desc +
-      "</p> <p>" +
-      VideoIcon[key].key +
-      "</p></div>";
-  }
-  document.getElementById("box").innerHTML = data;
-};
-test();
+import { markCopy } from "./js/utools";
+markCopy();
