@@ -10,7 +10,7 @@
  * @Date: 2021-08-09 17:42:06
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/index.js
- * @LastEditTime: 2021-08-22 16:53:51
+ * @LastEditTime: 2021-08-22 20:27:29
  */
 import "./css/index.scss";
 
@@ -27,4 +27,4 @@ import BpVideo from './js/BPvideo';
 
 new BpVideo({
   container: 'BpVideo',
-}).init()
+})

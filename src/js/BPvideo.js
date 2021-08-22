@@ -10,7 +10,7 @@
  * @Date: 2021-08-21 15:05:00
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/js/BPvideo.js
- * @LastEditTime: 2021-08-22 17:48:12
+ * @LastEditTime: 2021-08-22 20:29:13
  */
 
 import {getId} from './utools';
@@ -19,6 +19,7 @@ export default class BpVideo {
   constructor(opt) {
       //当前视频总容器
       this.container = document.getElementById(opt.container)
+      this.init()
     }
   
   init () {
