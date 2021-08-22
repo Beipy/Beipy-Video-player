@@ -10,7 +10,7 @@
  * @Date: 2021-08-20 17:00:33
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/js/seeIcon.js
- * @LastEditTime: 2021-08-20 17:10:04
+ * @LastEditTime: 2021-08-21 13:51:43
  */
 import VideoIcon from "./icon.js";
 
@@ -26,4 +26,4 @@ for (const key in VideoIcon) {
     VideoIcon[key].key +
     "</p></div>";
 }
-document.getElementById("box").innerHTML = data;
+document.getElementById("icon-box").innerHTML = data;

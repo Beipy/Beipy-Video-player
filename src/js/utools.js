@@ -10,8 +10,10 @@
  * @Date: 2021-08-20 17:12:13
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/js/utools.js
- * @LastEditTime: 2021-08-20 17:26:45
+ * @LastEditTime: 2021-08-22 17:47:40
  */
+
+
 
 /* 控制台输出作者版权 */
 export function markCopy() {
@@ -31,3 +33,5 @@ export function markCopy() {
     "padding:2px 8px;background:#0093ff;color:#fff;line-height:16px;font-size:12px;border-radius: 0px 5px 5px 0px;"
   );
 }
+
+

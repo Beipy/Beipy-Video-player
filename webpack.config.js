@@ -10,7 +10,7 @@
  * @Date: 2021-08-09 17:32:09
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/webpack.config.js
- * @LastEditTime: 2021-08-20 17:21:30
+ * @LastEditTime: 2021-08-22 17:10:20
  */
 // resolve用来拼接绝对路径的方法
 const { resolve } = require("path");
@@ -50,6 +50,14 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.art$/,
+        loader: 'art-template-loader'
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader',
       },
       //  {
       //   // url-loader：处理图片资源，问题：默认处理不了html中的img图片
