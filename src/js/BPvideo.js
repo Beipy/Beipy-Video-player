@@ -3,14 +3,14 @@
  * @*     / __ )___  (_)___  __  __ :  Author:Beipy
  * @*    / __  / _ \/ / __ \/ / / / :  WebURL:http://www.beipy.com
  * @*   / /_/ /  __/ / /_/ / /_/ /  :  Github:http://github.com/beipy
- * @*  /_____/\___/_/ .___/\__, /   :  别有梓人传，精艺夺天工。便使玉人雕琢，妙手略相同。
+ * @*  /_____/\___/_/ .___/\__, /   : Do not have catalpa people, the essence of art to seize the work. Then the jade carving, the same hand slightly.
  * @*              /_/    /____/    :  ******************************
  * @Descripttion: 
  * @version: v1.0.0
  * @Date: 2021-08-21 15:05:00
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/js/BPvideo.js
- * @LastEditTime: 2021-08-22 20:29:13
+ * @LastEditTime: 2021-08-22 23:13:45
  */
 
 import {getId} from './utools';

@@ -3,14 +3,14 @@
  * @*     / __ )___  (_)___  __  __ :  Author:Beipy
  * @*    / __  / _ \/ / __ \/ / / / :  WebURL:http://www.beipy.com
  * @*   / /_/ /  __/ / /_/ / /_/ /  :  Github:http://github.com/beipy
- * @*  /_____/\___/_/ .___/\__, /   :  别有梓人传，精艺夺天工。便使玉人雕琢，妙手略相同。
+ * @*  /_____/\___/_/ .___/\__, /   :  Do not have catalpa people, the essence of art to seize the work. Then the jade carving, the same hand slightly.
  * @*              /_/    /____/    :  ******************************
  * @Descripttion: 用于存储SVG格式图标
  * @version: V1.0.0
  * @Date: 2021-08-19 14:54:20
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/js/icon.js
- * @LastEditTime: 2021-08-20 15:34:48
+ * @LastEditTime: 2021-08-22 23:14:23
  */
 
 const videoIcon = {
