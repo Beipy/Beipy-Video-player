@@ -9,8 +9,8 @@
  * @version: 
  * @Date: 2021-08-22 21:53:09
  * @LastEditors: Beipy
- * @FilePath: /Beipy-Video-player/src/locales/en.js
- * @LastEditTime: 2021-08-22 23:14:00
+ * @FilePath: /Beipy-Video-player/src/locales/lang/en.js
+ * @LastEditTime: 2021-08-23 16:13:21
  */
 
 export default {
