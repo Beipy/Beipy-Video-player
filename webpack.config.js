@@ -10,7 +10,7 @@
  * @Date: 2021-08-09 17:32:09
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/webpack.config.js
- * @LastEditTime: 2021-08-22 18:02:44
+ * @LastEditTime: 2021-08-23 18:03:42
  */
 // resolve用来拼接绝对路径的方法
 const { resolve } = require("path");
@@ -53,12 +53,12 @@ module.exports = {
       },
       {
         test: /\.art$/,
-        loader: 'art-template-loader'
+        loader: "art-template-loader",
       },
       {
         test: /\.svg$/,
-        loader: 'svg-inline-loader',
-      }
+        loader: "svg-inline-loader",
+      },
     ],
   },
   plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
@@ -67,7 +67,7 @@ module.exports = {
     contentBase: resolve(__dirname, "dist"),
     // 启动gzip压缩
     compress: true,
-
+    watchContentBase: true,
     // 端口号
     port: 3550,
     host: "localhost",
