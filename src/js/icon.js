@@ -10,7 +10,7 @@
  * @Date: 2021-08-19 14:54:20
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/js/icon.js
- * @LastEditTime: 2021-08-24 22:13:00
+ * @LastEditTime: 2021-08-24 23:06:36
  */
 
 const videoIcon = {
@@ -24,7 +24,7 @@ const videoIcon = {
     key: "pause",
     desc: "暂停",
     html:
-      '<svg class="beipy-video-icon pause-icon" viewBox="0 0 18 18" > <g> <path d="M3.5,0C2.675,0,2,0.675,2,1.5v15C2,17.325,2.675,18,3.5,18S5,17.325,5,16.5v-15C5,0.675,4.325,0,3.5,0z"> </path> <path d="M14.5,0C13.675,0,13,0.675,13,1.5v15c0,0.825,0.675,1.5,1.5,1.5s1.5-0.675,1.5-1.5v-15C16,0.675,15.325,0,14.5,0z"> </path> </g> </svg>',
+      '<svg class="beipy-video-icon pause-icon rotateout" viewBox="0 0 18 18" > <g> <path d="M3.5,0C2.675,0,2,0.675,2,1.5v15C2,17.325,2.675,18,3.5,18S5,17.325,5,16.5v-15C5,0.675,4.325,0,3.5,0z"> </path> <path d="M14.5,0C13.675,0,13,0.675,13,1.5v15c0,0.825,0.675,1.5,1.5,1.5s1.5-0.675,1.5-1.5v-15C16,0.675,15.325,0,14.5,0z"> </path> </g> </svg>',
   },
   next: {
     key: "next",
