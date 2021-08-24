@@ -1,10 +1,69 @@
+@-webkit-keyframes screen_scale {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+  }
+
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+  }
+
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+  }
+}
+
+@keyframes screen_scale {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+  }
+
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+  }
+
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+  }
+}
+
 .beipy-video {
-  background-color: green;
+  background-color: #666;
   width: 800px;
   height: 400px;
   border-radius: $border-radius-base;
   overflow: hidden;
   position: relative;
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10+ and Edge */
+  user-select: none;
+  &:hover {
+    .beipy-video-controls {
+      bottom: 0;
+    }
+    .beipy-video-utools {
+      right: 0;
+    }
+  }
 
   video {
     width: 100%;
@@ -13,8 +72,14 @@
 
   // 图标
   &-icon {
-    width: 20px;
-    fill: $primary-color;
+    width: 100%;
+    height: 100%;
+    fill: white;
+    &:hover {
+      fill: $primary-color;
+      -webkit-animation: screen_scale 0.4s ease both;
+      animation: screen_scale 0.4s ease both;
+    }
   }
 
   &-logo {
@@ -25,7 +90,6 @@
     max-height: 50px;
     max-width: 200px;
     height: 40px;
-    // background-color: red;
     border-radius: $border-radius-base;
     img {
       width: 100%;
@@ -40,5 +104,246 @@
     left: 0;
     transition: all 0.3s ease;
     width: 100%;
+    &-mask {
+      background-image: -webkit-linear-gradient(
+        bottom,
+        rgba(0, 0, 0, 0.6),
+        transparent 100%
+      );
+      background-image: -moz-linear-gradient(
+        bottom,
+        rgba(0, 0, 0, 0.6),
+        transparent 100%
+      );
+      background-image: linear-gradient(
+        bottom,
+        rgba(0, 0, 0, 0.6),
+        transparent 100%
+      );
+      height: 98px;
+      width: 100%;
+    }
+    &-wrap {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      height: 50px;
+      transition: bottom 0.5s ease;
+      pointer-events: auto;
+      color: #fff;
+      &-footer {
+        position: relative;
+        /* overflow: hidden; */
+        height: 50px;
+        line-height: 50px;
+        padding: 0 10px;
+        font-size: 14px;
+        &-left {
+          float: left;
+          height: 100%;
+        }
+        &-right {
+          float: right;
+          height: 100%;
+        }
+        &-btn-item {
+          display: inline-block;
+          height: 100%;
+          width: 20px;
+          padding: 0px 4px;
+          margin-left: 8px;
+          cursor: pointer;
+          position: relative;
+
+          &:hover {
+            .beipy-tipMenu-box {
+              display: block;
+            }
+          }
+          .beipy-tipMenu-box {
+            position: absolute;
+            bottom: 40px;
+            display: none;
+            left: 50%;
+            border-radius: 6px;
+            transform: translateX(-50%);
+            .beipy-Menu {
+              width: auto;
+              height: auto;
+              padding: 0 5px;
+              text-align: center;
+              position: relative;
+              display: inline-block;
+              background-color: rgba(0, 0, 0, 0.8);
+              border-radius: 5px;
+              overflow: hidden;
+              padding-top: 8px;
+              min-width: 80px;
+              .beipy-Menu-item {
+                display: block;
+                width: 100%;
+                height: 18px;
+                line-height: 18px;
+                color: #fff;
+                position: relative;
+                white-space: nowrap;
+                text-align: center;
+                padding: 2px 0 8px;
+              }
+            }
+          }
+        }
+        .beipy-live-tag {
+          width: auto;
+          height: 20px;
+          margin: 15px 0;
+          margin-left: 8px;
+          line-height: 20px;
+          vertical-align: top;
+          font-size: 12px;
+          background-color: rgba(0, 0, 0, 0.5);
+          padding: 0 10px;
+          border-radius: 15px;
+
+          span {
+            vertical-align: inherit;
+            display: inline-block;
+            border-radius: 50%;
+            width: 6px;
+            height: 6px;
+            background-color: red;
+            margin-top: 7px;
+          }
+        }
+        .beipy-video-time {
+          vertical-align: top;
+          width: auto;
+        }
+        .beipy-video-tag-bg {
+          width: auto;
+          height: 20px;
+          margin: 15px 0;
+          margin-left: 8px;
+          line-height: 20px;
+          vertical-align: top;
+          font-size: 12px;
+          background-color: rgba(0, 0, 0, 0.5);
+          padding: 0 10px;
+          border-radius: 15px;
+        }
+      }
+      &-progress {
+        position: absolute;
+        width: 100%;
+        height: 10px;
+        cursor: pointer;
+        top: -10px;
+
+        .progress-box {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 3px;
+          transition: all 0.1s linear;
+          -o-transition: all 0.1s linear;
+          -moz-transition: all 0.1s linear;
+          -webkit-transition: all 0.1s linear;
+          background-color: rgba(255, 255, 255, 0.3);
+          .progress-loading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 70%;
+            background-color: rgba(255, 255, 255, 0.5);
+          }
+          .progress-currentloading {
+            position: absolute;
+            width: 30%;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: $primary-color;
+          }
+          .progress-highlight {
+            &-item {
+              background-color: #ffffff;
+              position: absolute;
+              top: 0;
+              left: 50%;
+              width: 4px;
+              height: 100%;
+              border-radius: 2px;
+            }
+          }
+          .progress-currentplay {
+            position: absolute;
+            display: none;
+            top: -3px;
+            left: 30%;
+            width: 12px;
+            margin-left: -6px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: $primary-color;
+          }
+        }
+
+        &:hover {
+          .progress-box {
+            height: 6px;
+          }
+          .progress-highlight-item {
+            height: 8px;
+            top: -1px;
+          }
+          .progress-currentplay {
+            display: block;
+          }
+        }
+      }
+    }
+    &-tip {
+      position: absolute;
+      bottom: 56px;
+      left: 0;
+      color: #ffffff;
+      padding: 4px 10px;
+      &-msg {
+        color: #fff;
+        display: inline-block;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 20px;
+        overflow: hidden;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 14px;
+        line-height: 30px;
+        height: 30px;
+        padding: 0 15px;
+      }
+    }
+  }
+  // utools
+  &-utools {
+    position: absolute;
+    right: -50px;
+    line-height: 3.125rem;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: auto;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    top: 50%;
+    transform: translateY(-60%);
+    &-item {
+      padding: 10px;
+      color: #ffffff;
+      line-height: 0;
+    }
   }
 }

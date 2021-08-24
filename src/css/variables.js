@@ -10,11 +10,11 @@
  * @Date: 2021-08-20 16:01:03
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/css/variables.js
- * @LastEditTime: 2021-08-20 16:57:41
+ * @LastEditTime: 2021-08-24 16:09:03
  */
 
 module.exports = {
-  "primary-color": "#3c35d8", //主题色
+  "primary-color": "#6665fe", //主题色
   "success-color": "#F5a31e", //成功色
   "warning-color": "Ffd33d", //警告色
   "error-color": "#FF3250", //错误色

@@ -10,7 +10,7 @@
  * @Date: 2021-08-09 17:32:09
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/webpack.config.js
- * @LastEditTime: 2021-08-23 18:03:42
+ * @LastEditTime: 2021-08-24 10:50:52
  */
 // resolve用来拼接绝对路径的方法
 const { resolve } = require("path");

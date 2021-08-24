@@ -10,16 +10,17 @@
  * @Date: 2021-08-20 17:00:33
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/js/seeIcon.js
- * @LastEditTime: 2021-08-22 23:14:19
+ * @LastEditTime: 2021-08-24 17:18:39
  */
 import VideoIcon from "./icon.js";
 
 let data = "";
+
 for (const key in VideoIcon) {
   data =
     data +
     '<div style="text-align: center; padding: 10px;display: inline-block; width: 6%;"> <div>' +
-    VideoIcon[key].InitHtml +
+    VideoIcon[key].html +
     "</div> <p>" +
     VideoIcon[key].desc +
     "</p> <p>" +

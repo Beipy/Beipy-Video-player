@@ -10,22 +10,20 @@
  * @Date: 2021-08-22 21:44:48
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/locales/I18n.js
- * @LastEditTime: 2021-08-23 16:17:45
+ * @LastEditTime: 2021-08-24 14:36:08
  */
 
 import zhCn from "./lang/zh-cn";
 import en from "./lang/en";
 
-export default class I18n {
-  // Setting the default language
-  constructor(lang = "zh-cn") {
-    this.lang = lang;
-  }
+export default function I18n(lang = "zh-cn") {
+  this.lang = lang;
   // translation text method
-  t(text) {
+  this.t =(text) =>{
     if (locales[this.lang] && locales[this.lang][text]) {
       return locales[this.lang][text];
     } else {
+      console.log(this.lang,text);
       return text;
     }
   }

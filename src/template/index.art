@@ -1,0 +1,103 @@
+{{@ lang('copyright')}}
+<div class="beipy-video">
+
+  <video src="https://api.dogecloud.com/player/get.mp4?vcode=5ac682e6f8231991&userId=17&ext=.mp4"></video>
+  {{ if logo }}
+  <div class="beipy-video-logo">
+    <img src="{{ logo }}" />
+  </div>
+  {{ /if }}
+  <div class="beipy-video-controls">
+    <!-- 控制背景遮罩 -->
+    <div class="beipy-video-controls-mask"></div>
+    <div class="beipy-video-controls-wrap">
+      <div class="beipy-video-controls-wrap-footer">
+        <!-- 左侧按钮组 -->
+        <div class="beipy-video-controls-wrap-footer-left">
+          <div class="beipy-video-controls-wrap-footer-btn-item {{icon.play.key}}">
+            {{@ icon.play.html}}
+          </div>
+          {{each footer.left}}
+
+          {{if $value=='cycle'}}
+          <div class="beipy-video-controls-wrap-footer-btn-item {{icon.cycleOff.key}}">
+            {{@ icon.cycleOff.html}}
+          </div>
+          {{else if $value=='live'}}
+          <div class="beipy-video-controls-wrap-footer-btn-item beipy-live-tag">
+            <span></span> {{lang('live')}}
+          </div>
+          {{else if $value=='time'}}
+          <div class="beipy-video-controls-wrap-footer-btn-item beipy-video-time">
+            <span>10:52</span><span> / </span><span>10:52</span>
+          </div>
+          {{else}}
+          <div class="beipy-video-controls-wrap-footer-btn-item {{icon[$value].key}}" title="{{lang('icon')[$value]}}">
+            {{@ icon[$value].html}}
+          </div>
+          {{/if}}
+          {{/each}}
+
+        </div>
+
+
+        <!-- 右侧按钮组 -->
+        <div class="beipy-video-controls-wrap-footer-right">
+          {{each footer.right}}
+          {{if $value=='quality'}}
+          <div class="beipy-video-controls-wrap-footer-btn-item beipy-video-tag-bg quality">
+            <div class="beipy-tipMenu-box">
+              <div class="beipy-Menu">
+                <div class="beipy-Menu-item">
+                  asdfas
+                </div>
+              </div>
+            </div>
+            {{lang('quality')}}
+          </div>
+          {{else if $value=='speed'}}
+          <div class="beipy-video-controls-wrap-footer-btn-item beipy-video-tag-bg speed">
+            {{lang('speed')}}
+          </div>
+
+          {{else}}
+          <div class="beipy-video-controls-wrap-footer-btn-item {{icon[$value].key}}" title="{{lang('icon')[$value]}}">
+            {{@ icon[$value].html}}
+          </div>
+          {{/if}}
+          {{/each}}
+        </div>
+      </div>
+      <!-- 进度条 -->
+      <div class="beipy-video-controls-wrap-progress">
+        <div class="progress-box">
+          <!-- 预加载 -->
+          <div class="progress-loading"></div>
+          <!-- 当前播放进度 -->
+          <div class="progress-currentloading"></div>
+          <!-- 控制点 -->
+          <div class="progress-highlight">
+            <div class="progress-highlight-item"></div>
+          </div>
+          <!-- 控制点 -->
+          <div class="progress-currentplay"></div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="beipy-video-controls-tip">
+      <div class="beipy-video-controls-tip-msg">
+        BeipyVideoJs演示demo视频
+      </div>
+    </div>
+  </div>
+  <!-- 工具箱 -->
+  <div class="beipy-video-utools">
+    {{each utools}}
+    <div class="beipy-video-utools-item  {{icon[$value].key}}" title="{{lang('icon')[$value]}}">
+      {{@ icon[$value].html}}
+    </div>
+    {{/each}}
+  </div>
+</div>

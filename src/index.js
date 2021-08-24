@@ -10,7 +10,7 @@
  * @Date: 2021-08-09 17:42:06
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/index.js
- * @LastEditTime: 2021-08-23 17:39:53
+ * @LastEditTime: 2021-08-24 18:26:55
  */
 import "./css/index.scss";
 
@@ -24,5 +24,6 @@ import BpVideo from "./js/BPvideo";
 // 注册并引用
 
 new BpVideo({
-  container: "BpVideo",
+  container: document.getElementById("BpVideo"),
+  lang: "zh-cn",
 });
