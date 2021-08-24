@@ -1,6 +1,5 @@
 {{@ lang('copyright')}}
 <div class="beipy-video">
-
   <video src="https://api.dogecloud.com/player/get.mp4?vcode=5ac682e6f8231991&userId=17&ext=.mp4"></video>
   {{ if logo }}
   <div class="beipy-video-logo">
@@ -14,8 +13,9 @@
       <div class="beipy-video-controls-wrap-footer">
         <!-- 左侧按钮组 -->
         <div class="beipy-video-controls-wrap-footer-left">
-          <div class="beipy-video-controls-wrap-footer-btn-item {{icon.play.key}}">
+          <div class="beipy-video-controls-wrap-footer-btn-item play-icon {{icon.play.key}}">
             {{@ icon.play.html}}
+            {{@ icon.pause.html}}
           </div>
           {{each footer.left}}
 

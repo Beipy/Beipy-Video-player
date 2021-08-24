@@ -1,48 +1,4 @@
-@-webkit-keyframes screen_scale {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-  }
-
-  50% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-  }
-
-  to {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-  }
-}
-
-@keyframes screen_scale {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-  }
-
-  50% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-  }
-
-  to {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-  }
-}
+@import "./transform.scss";
 
 .beipy-video {
   background-color: #666;
@@ -345,5 +301,23 @@
       color: #ffffff;
       line-height: 0;
     }
+  }
+}
+
+// 切换动画
+.play-icon {
+  position: relative;
+  svg {
+    position: absolute;
+    width: calc(100% - 8px);
+    height: 100%;
+  }
+  .rotateout {
+    -webkit-animation: rotateout 0.2s ease forwards;
+    animation: rotateout 0.2s ease forwards;
+  }
+  .rotatein {
+    -webkit-animation: rotatein 0.2s ease forwards;
+    animation: rotatein 0.2s ease forwards;
   }
 }

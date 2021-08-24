@@ -10,7 +10,7 @@
  * @Date: 2021-08-21 15:05:00
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/js/BPvideo.js
- * @LastEditTime: 2021-08-24 18:29:32
+ * @LastEditTime: 2021-08-24 22:38:11
  */
 
 import { getId } from "./utools";
@@ -51,6 +51,33 @@ export default class BpVideo {
         "shop",
         "more",
       ],
+    });
+    this.playButton = this.container.querySelector('.play-icon ');
+    this.video = this.container.querySelector('video');
+    this.beipyVideo = this.container.querySelector('.beipy-video')
+    // 右键菜单
+    this.beipyVideo.addEventListener('contextmenu', (e) => {
+      const event = e || window.event;
+      event.preventDefault();
+      console.log('邮件点击');
+    })
+    // 播放按钮
+    this.playButton.addEventListener('click', (e) => {
+      if (this.video.paused) {
+        this.video.play()
+        this.playButton.querySelector('svg.paly-icon').classList.remove('rotatein')
+        this.playButton.querySelector('svg.pause-icon').classList.remove('rotateout')
+        this.playButton.querySelector('svg.paly-icon').classList.add('rotateout')
+        this.playButton.querySelector('svg.pause-icon').classList.add('rotatein')
+      } else {
+        this.video.pause()
+        this.playButton.querySelector('svg.paly-icon').classList.remove('rotateout')
+        this.playButton.querySelector('svg.pause-icon').classList.remove('rotatein')
+        this.playButton.querySelector('svg.paly-icon').classList.add('rotatein')
+        this.playButton.querySelector('svg.pause-icon').classList.add('rotateout')
+      }
+
+
     });
   }
 }
