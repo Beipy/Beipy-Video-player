@@ -10,7 +10,7 @@
  * @Date: 2021-08-21 15:05:00
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/js/BPvideo.js
- * @LastEditTime: 2021-08-25 16:11:26
+ * @LastEditTime: 2021-08-25 18:29:03
  */
 
 import { getId } from "./utools";
@@ -29,10 +29,9 @@ export default class BpVideo {
     this.left = []; //"next", "loop", "live", "time";
     this.right = []; //"quality", "speed", "volume", "setting", "PIP", "pageFullOn", "FullOn",
 
-    this.episode && this.episode.length > 0 && this.left.push("next");
-    opt.loop && this.left.push("loop");
-    opt.live && this.left.push("live");
-    this.left.push("time");
+    // opt.loop && this.left.push("loop");
+    // opt.live && this.left.push("live");
+    // this.left.push("time");
     this.process();
     this.init();
   }
@@ -104,8 +103,9 @@ export default class BpVideo {
   process() {
     // 处理尺寸
     if (this.options.width && this.options.height) {
-      console.log("同时存在");
-      // this.beipyVideo.style.width = this.options.width + "px";
+      this.shape(this.options.width);
+      this.container.style.width = this.options.width + "px";
+      this.container.style.height = this.options.height + "px";
     } else if (this.options.width) {
       console.log("存在width");
       this.container.style.width = this.options.width + "px";
@@ -118,10 +118,14 @@ export default class BpVideo {
   }
   shape(width) {
     if (width <= 300) {
-      this.left.map((item) => {
-        // console.log(this.container);
-        // this.container.querySelector(`.` + item).style.display = "none";
-      });
+      console.log(width);
+      this.episode &&
+        this.episode.length > 0 &&
+        this.left.push({ type: "next", show: false });
+      // this.left.map((item) => {
+      //   console.log(this.container.offsetWidth);
+      //   // this.container.querySelector(`.` + item).style.display = "none";
+      // });
     } else if (300 < width > 800) {
     } else {
     }

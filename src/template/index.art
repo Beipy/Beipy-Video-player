@@ -17,24 +17,26 @@
             {{@ icon.play.html}}
             {{@ icon.pause.html}}
           </div>
+
           {{each footer.left}}
 
-          {{if $value=='loop'}}
+          {{if $value.type=='loop'}}
           <div class="beipy-video-controls-wrap-footer-btn-item loop-icon-btn ">
             {{@ icon.loopOff.html}}
             <!-- {{@ icon.loopOn.html}} -->
           </div>
-          {{else if $value=='live'}}
+          {{else if $value.type=='live'}}
           <div class="beipy-video-controls-wrap-footer-btn-item beipy-live-tag">
             <span></span> {{lang('live')}}
           </div>
-          {{else if $value=='time'}}
+          {{else if $value.type=='time'}}
           <div class="beipy-video-controls-wrap-footer-btn-item beipy-video-time">
             <span>10:52</span><span> / </span><span>10:52</span>
           </div>
           {{else}}
-          <div class="beipy-video-controls-wrap-footer-btn-item {{icon[$value].key}}" title="{{lang('icon')[$value]}}">
-            {{@ icon[$value].html}}
+          <div class="beipy-video-controls-wrap-footer-btn-item {{icon[$value.type].key}}"
+            title="{{lang('icon')[$value.type]}}">
+            {{@ icon[$value.type].html}}
           </div>
           {{/if}}
           {{/each}}
