@@ -10,7 +10,7 @@
  * @Date: 2021-08-21 15:05:00
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/js/BPvideo.js
- * @LastEditTime: 2021-08-25 14:24:47
+ * @LastEditTime: 2021-08-25 16:11:26
  */
 
 import { getId } from "./utools";
@@ -19,6 +19,7 @@ import I18n from "../locales/I18n";
 import VideoIcon from "./icon.js";
 export default class BpVideo {
   constructor(opt) {
+    this.options = opt;
     this.container = opt.container;
     this.lang = new I18n(opt.lang).t;
     this.icon = VideoIcon;
@@ -32,6 +33,7 @@ export default class BpVideo {
     opt.loop && this.left.push("loop");
     opt.live && this.left.push("live");
     this.left.push("time");
+    this.process();
     this.init();
   }
 
@@ -98,5 +100,30 @@ export default class BpVideo {
     //     this.playButton.querySelector('svg.pause-icon').classList.add('rotateout')
     //   }
     // });
+  }
+  process() {
+    // 处理尺寸
+    if (this.options.width && this.options.height) {
+      console.log("同时存在");
+      // this.beipyVideo.style.width = this.options.width + "px";
+    } else if (this.options.width) {
+      console.log("存在width");
+      this.container.style.width = this.options.width + "px";
+      this.shape(this.options.width);
+    } else if (this.options.height) {
+      console.log("存在height");
+    } else {
+      console.log("都不在");
+    }
+  }
+  shape(width) {
+    if (width <= 300) {
+      this.left.map((item) => {
+        // console.log(this.container);
+        // this.container.querySelector(`.` + item).style.display = "none";
+      });
+    } else if (300 < width > 800) {
+    } else {
+    }
   }
 }

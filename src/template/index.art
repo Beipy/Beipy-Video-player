@@ -13,15 +13,16 @@
       <div class="beipy-video-controls-wrap-footer">
         <!-- 左侧按钮组 -->
         <div class="beipy-video-controls-wrap-footer-left">
-          <div class="beipy-video-controls-wrap-footer-btn-item play-icon {{icon.play.key}}">
+          <div class="beipy-video-controls-wrap-footer-btn-item play-icon ">
             {{@ icon.play.html}}
             {{@ icon.pause.html}}
           </div>
           {{each footer.left}}
 
           {{if $value=='loop'}}
-          <div class="beipy-video-controls-wrap-footer-btn-item {{icon.loopOff.key}}">
+          <div class="beipy-video-controls-wrap-footer-btn-item loop-icon-btn ">
             {{@ icon.loopOff.html}}
+            <!-- {{@ icon.loopOn.html}} -->
           </div>
           {{else if $value=='live'}}
           <div class="beipy-video-controls-wrap-footer-btn-item beipy-live-tag">

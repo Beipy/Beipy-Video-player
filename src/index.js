@@ -10,7 +10,7 @@
  * @Date: 2021-08-09 17:42:06
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/index.js
- * @LastEditTime: 2021-08-25 14:39:50
+ * @LastEditTime: 2021-08-25 15:48:41
  */
 import "./css/index.scss";
 
@@ -25,11 +25,13 @@ import BpVideo from "./js/BPvideo";
 
 new BpVideo({
   container: document.getElementById("BpVideo"),
+  title: "扫黑风暴",
   lang: "zh-cn",
+  width: 300, //width 和 height 同时设置将取消比例
+  // height: 200,
+  ratio: [16, 9], //比例
   live: true,
   radius: "8px", //圆角
-  style: "",
-  title: "扫黑风暴",
   loop: true, //循环
   episode: [
     {
