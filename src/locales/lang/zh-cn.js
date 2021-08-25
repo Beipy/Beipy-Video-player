@@ -10,7 +10,7 @@
  * @Date: 2021-08-22 21:52:54
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/locales/lang/zh-cn.js
- * @LastEditTime: 2021-08-24 17:06:35
+ * @LastEditTime: 2021-08-25 12:20:01
  */
 
 export default {
@@ -31,8 +31,8 @@ export default {
     play: "播放",
     pause: "暂停",
     next: "下一集",
-    cycleOff: "未循环",
-    cycleOn: "已循环",
+    loopOff: "未循环",
+    loopOn: "已循环",
     volume: "音量",
     mute: "静音",
     chooseOff: "未选中",
