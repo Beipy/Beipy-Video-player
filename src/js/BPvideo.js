@@ -10,7 +10,7 @@
  * @Date: 2021-08-21 15:05:00
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/js/BPvideo.js
- * @LastEditTime: 2021-08-25 18:29:03
+ * @LastEditTime: 2021-08-25 19:32:58
  */
 
 import { getId } from "./utools";
@@ -27,11 +27,17 @@ export default class BpVideo {
     this.utools = opt.utools;
     this.episode = opt.episode || [];
     this.left = []; //"next", "loop", "live", "time";
-    this.right = []; //"quality", "speed", "volume", "setting", "PIP", "pageFullOn", "FullOn",
+    this.size = "";
+    this.right = [
+      "quality",
+      "speed",
+      "volume",
+      "setting",
+      "PIP",
+      "pageFullOn",
+      "FullOn",
+    ]; //"quality", "speed", "volume", "setting", "PIP", "pageFullOn", "FullOn",
 
-    // opt.loop && this.left.push("loop");
-    // opt.live && this.left.push("live");
-    // this.left.push("time");
     this.process();
     this.init();
   }
@@ -40,6 +46,7 @@ export default class BpVideo {
     this.container.innerHTML = tplVideo({
       logo: "https://gw.alicdn.com/tfs/TB1ugm9f5cKOu4jSZKbXXc19XXa-356-76.png",
       icon: this.icon,
+      size: this.size,
       lang: this.lang,
       radius: this.radius,
       footer: {
@@ -51,7 +58,7 @@ export default class BpVideo {
 
     this.beipyVideo = this.container.querySelector(".beipy-video"); //当前总盒子
     this.video = this.container.querySelector("video"); //视频
-
+    this.logo = this.container.querySelector(".beipy-video-logo");
     this.palyIcon = this.container.querySelector(".play-icon svg.paly-icon"); //Footer播放按钮图标
     this.pauseIcon = this.container.querySelector(".play-icon svg.pause-icon"); //Footer暂停按钮图标
     this.tipBox = this.container.querySelector(".beipy-video-controls-tip"); //tip消息提示盒子
@@ -116,18 +123,35 @@ export default class BpVideo {
       console.log("都不在");
     }
   }
+  /* 设置布局min middle large */
   shape(width) {
-    if (width <= 300) {
-      console.log(width);
+    if (width <= 400) {
+      console.log("-4");
+      this.size = "min";
       this.episode &&
         this.episode.length > 0 &&
         this.left.push({ type: "next", show: false });
-      // this.left.map((item) => {
-      //   console.log(this.container.offsetWidth);
-      //   // this.container.querySelector(`.` + item).style.display = "none";
-      // });
-    } else if (300 < width > 800) {
-    } else {
+      this.options.loop && this.left.push({ type: "loop", show: false });
+      this.options.live && this.left.push({ type: "live", show: true });
+      this.left.push({ type: "time", show: false });
+    } else if (width <= 650) {
+      console.log("4-5");
+      this.size = "middle";
+      this.episode &&
+        this.episode.length > 0 &&
+        this.left.push({ type: "next", show: true });
+      this.options.loop && this.left.push({ type: "loop", show: false });
+      this.options.live && this.left.push({ type: "live", show: true });
+      this.left.push({ type: "time", show: true });
+    } else if (650 < width) {
+      console.log("651");
+      this.size = "large";
+      this.episode &&
+        this.episode.length > 0 &&
+        this.left.push({ type: "next", show: true });
+      this.options.loop && this.left.push({ type: "loop", show: true });
+      this.options.live && this.left.push({ type: "live", show: true });
+      this.left.push({ type: "time", show: true });
     }
   }
 }
