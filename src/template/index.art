@@ -5,6 +5,7 @@
   <div class="beipy-video-logo" {{if size=='min' }} style="height: 20px;" {{else if size=='middle' }}
     style="height: 30px;" {{/if}}>
     <img src="{{ logo }}" />
+    {{@ icon.logo.html}}
   </div>
   {{ /if }}
   <div class="beipy-video-controls">

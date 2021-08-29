@@ -309,6 +309,13 @@
 // 切换动画
 .play-icon {
   position: relative;
+  // &:hover {
+  //   svg {
+  //     fill: $primary-color;
+  //     -webkit-animation: screen_scale 0.4s ease both;
+  //     animation: screen_scale 0.4s ease both;
+  //   }
+  // }
   svg {
     position: absolute;
     width: calc(100% - 8px);
