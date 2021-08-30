@@ -1,11 +1,10 @@
 {{@ lang('copyright')}}
 <div class="beipy-video" {{ if radius }} style="border-radius:{{ radius }}" {{/if}}>
-  <video src="https://api.dogecloud.com/player/get.mp4?vcode=5ac682e6f8231991&userId=17&ext=.mp4"></video>
+  <video src="https://blz-videos.nosdn.127.net/1/OverWatch/OVR_D.VA_SHOOTING_STAR_zhCN_YT_PC_3.mp4"></video>
   {{ if logo }}
   <div class="beipy-video-logo" {{if size=='min' }} style="height: 20px;" {{else if size=='middle' }}
     style="height: 30px;" {{/if}}>
     <img src="{{ logo }}" />
-    {{@ icon.logo.html}}
   </div>
   {{ /if }}
   <div class="beipy-video-controls">
@@ -71,6 +70,7 @@
           {{else}}
           <div class="beipy-video-controls-wrap-footer-btn-item {{icon[$value].key}}" title="{{lang('icon')[$value]}}">
             {{@ icon[$value].html}}
+            <!-- <div>{{lang('icon')[$value]}}</div> -->
           </div>
           {{/if}}
           {{/each}}

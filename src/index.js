@@ -10,26 +10,27 @@
  * @Date: 2021-08-09 17:42:06
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/index.js
- * @LastEditTime: 2021-08-25 19:36:56
+ * @LastEditTime: 2021-08-30 15:14:13
  */
 import "./css/index.scss";
 
 // 查看所有的icon图标
 // import seeIcon from "./js/seeIcon.js";
 
-import { markCopy } from "./js/utools";
-markCopy();
+// import { markCopy } from "./js/utools";
+// markCopy();
 
 import BpVideo from "./js/BPvideo";
 // 注册并引用
 
 new BpVideo({
   container: document.getElementById("BpVideo"),
+  logo: "https://gw.alicdn.com/tfs/TB1ugm9f5cKOu4jSZKbXXc19XXa-356-76.png",
   title: "扫黑风暴",
   lang: "zh-cn",
-  width: 700, //width 和 height 同时设置将取消比例
-  height: 600,
-  ratio: [16, 9], //比例
+  width: 800, //width 和 height 同时设置将取消比例
+  // height: 600,
+  // ratio: [16, 20], //比例
   live: true,
   radius: "8px", //圆角
   loop: true, //循环
