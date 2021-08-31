@@ -10,7 +10,7 @@
  * @Date: 2021-08-09 17:42:06
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/index.js
- * @LastEditTime: 2021-08-30 15:14:13
+ * @LastEditTime: 2021-08-31 17:13:47
  */
 import "./css/index.scss";
 
@@ -36,8 +36,9 @@ new BpVideo({
   loop: true, //循环
   episode: [
     {
-      title: "第一集",
-      url: "https://api.dogecloud.com/player/get.mp4?vcode=5ac682e6f8231991&userId=17&ext=.mp4",
+      title: "宇宙少女-UNNATURAL",
+      type: "mp4",
+      url: "https://mvwebfs.ali.kugou.com/202108311614/ebb6e4cf690f84b922f0234e2aa5a76a/KGTX/CLTX002/eab32a130dc384a633735efb4fe11f6a.mp4",
     },
   ], //续集
   utools: ["screenshot", "gif", "area", "download", "identify", "shop", "more"],
