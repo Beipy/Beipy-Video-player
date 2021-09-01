@@ -118,6 +118,9 @@
             .beipy-tipMenu-box {
               display: block;
             }
+            .tip-title {
+              display: block;
+            }
           }
           .beipy-tipMenu-box {
             position: absolute;
@@ -150,6 +153,21 @@
                 padding: 2px 0 8px;
               }
             }
+          }
+          .tip-title {
+            display: inline;
+            position: absolute;
+            display: none;
+            top: -40px;
+            left: 50%;
+            white-space: nowrap;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            font-size: 14px;
+            padding: 0 15px;
+            height: 30px;
+            line-height: 30px;
           }
         }
         .beipy-live-tag {
@@ -189,6 +207,9 @@
           background-color: rgba(0, 0, 0, 0.5);
           padding: 0 10px;
           border-radius: 15px;
+          .tip-title {
+            top: -55px;
+          }
         }
       }
       &-progress {
@@ -293,7 +314,7 @@
     width: 40px;
     height: auto;
     border-radius: 4px;
-    overflow: hidden;
+    // overflow: hidden;
     background-color: rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
     top: 50%;
@@ -302,6 +323,30 @@
       padding: 10px;
       color: #ffffff;
       line-height: 0;
+      position: relative;
+    }
+    .utools-right {
+      &:hover {
+        .tip-title {
+          display: block;
+        }
+      }
+      .tip-title {
+        display: inline;
+        position: absolute;
+        display: none;
+        top: 5px;
+        transition: all 0;
+        white-space: nowrap;
+        left: 0;
+        transform: translateX(-100%);
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 15px;
+        font-size: 12px;
+        padding: 0 15px;
+        height: 30px;
+        line-height: 30px;
+      }
     }
   }
 }
@@ -311,7 +356,7 @@
   position: relative;
   // &:hover {
   //   svg {
-  //     fill: $primary-color;
+  //     // fill: $primary-color;
   //     -webkit-animation: screen_scale 0.4s ease both;
   //     animation: screen_scale 0.4s ease both;
   //   }

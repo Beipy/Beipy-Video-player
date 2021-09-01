@@ -10,7 +10,7 @@
  * @Date: 2021-08-22 21:53:09
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/locales/lang/en.js
- * @LastEditTime: 2021-08-24 17:08:45
+ * @LastEditTime: 2021-09-01 15:18:32
  */
 
 export default {
@@ -26,6 +26,7 @@ export default {
   live: "live",
   volume: "volume",
   speed: "speed",
+  loop: "loop",
   quality: "quality",
   icon: {
     play: "play",

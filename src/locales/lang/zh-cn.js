@@ -10,7 +10,7 @@
  * @Date: 2021-08-22 21:52:54
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/locales/lang/zh-cn.js
- * @LastEditTime: 2021-08-25 12:20:01
+ * @LastEditTime: 2021-09-01 15:18:24
  */
 
 export default {
@@ -27,6 +27,7 @@ export default {
   volume: "音量",
   speed: "倍速",
   quality: "清晰度",
+  loop: "循环状态",
   icon: {
     play: "播放",
     pause: "暂停",

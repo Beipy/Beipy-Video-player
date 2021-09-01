@@ -25,8 +25,10 @@
           {{if $value.type=='loop'}}
           <div class="beipy-video-controls-wrap-footer-btn-item loop-icon-btn " {{if $value.show==false
             }}style="display:none ;" {{/if}}>
+            <div class="tip-title">{{lang('loop')}}</div>
             {{@ icon.loopOff.html}}
             <!-- {{@ icon.loopOn.html}} -->
+
           </div>
           {{else if $value.type=='live'}}
           <div class="beipy-video-controls-wrap-footer-btn-item beipy-live-tag" {{if $value.show==false
@@ -41,7 +43,9 @@
           {{else}}
           <div class="beipy-video-controls-wrap-footer-btn-item {{icon[$value.type].key}}" {{if $value.show==false
             }}style="display:none ;" {{/if}} title="{{lang('icon')[$value.type]}}">
+
             {{@ icon[$value.type].html}}
+            <div class="tip-title">{{lang('icon')[icon[$value.type].key]}}</div>
           </div>
           {{/if}}
           {{/each}}
@@ -62,16 +66,18 @@
               </div>
             </div>
             {{lang('quality')}}
+            <div class="tip-title">{{lang('quality')}}</div>
           </div>
           {{else if $value=='speed'}}
           <div class="beipy-video-controls-wrap-footer-btn-item beipy-video-tag-bg speed">
             {{lang('speed')}}
+            <div class="tip-title">{{lang('speed')}}</div>
           </div>
 
           {{else}}
-          <div class="beipy-video-controls-wrap-footer-btn-item {{icon[$value].key}}" title="{{lang('icon')[$value]}}">
+          <div class="beipy-video-controls-wrap-footer-btn-item {{icon[$value].key}}">
             {{@ icon[$value].html}}
-            <!-- <div>{{lang('icon')[$value]}}</div> -->
+            <div class="tip-title">{{lang('icon')[$value]}}</div>
           </div>
           {{/if}}
           {{/each}}
@@ -104,8 +110,9 @@
   <!-- 工具箱 -->
   <div class="beipy-video-utools">
     {{each utools}}
-    <div class="beipy-video-utools-item  {{icon[$value].key}}" title="{{lang('icon')[$value]}}">
+    <div class="beipy-video-utools-item  {{icon[$value].key}} utools-right">
       {{@ icon[$value].html}}
+      <div class="tip-title">{{lang('icon')[$value]}}</div>
     </div>
     {{/each}}
   </div>
