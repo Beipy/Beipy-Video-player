@@ -10,7 +10,7 @@
  * @Date: 2021-08-31 16:56:00
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/js/data.js
- * @LastEditTime: 2021-08-31 17:12:41
+ * @LastEditTime: 2021-09-01 16:30:50
  */
 export default [
   {
@@ -21,7 +21,7 @@ export default [
   {
     title: "宇宙少女-UNNATURAL",
     type: "mp4",
-    url: "https://mvwebfs.ali.kugou.com/202108311614/ebb6e4cf690f84b922f0234e2aa5a76a/KGTX/CLTX002/eab32a130dc384a633735efb4fe11f6a.mp4",
+    url: "https://mvwebfs.ali.kugou.com/202109011620/138e5e3395fecbb0c1b7b588c5313ac8/KGTX/CLTX002/eab32a130dc384a633735efb4fe11f6a.mp4",
   },
   {
     title: "aespa (에스파) - aespa《Next Level》MV",

@@ -10,7 +10,7 @@
  * @Date: 2021-08-09 17:42:06
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/index.js
- * @LastEditTime: 2021-08-31 17:13:47
+ * @LastEditTime: 2021-09-01 16:21:28
  */
 import "./css/index.scss";
 
@@ -38,7 +38,7 @@ new BpVideo({
     {
       title: "宇宙少女-UNNATURAL",
       type: "mp4",
-      url: "https://mvwebfs.ali.kugou.com/202108311614/ebb6e4cf690f84b922f0234e2aa5a76a/KGTX/CLTX002/eab32a130dc384a633735efb4fe11f6a.mp4",
+      url: "https://mvwebfs.ali.kugou.com/202109011620/138e5e3395fecbb0c1b7b588c5313ac8/KGTX/CLTX002/eab32a130dc384a633735efb4fe11f6a.mp4",
     },
   ], //续集
   utools: ["screenshot", "gif", "area", "download", "identify", "shop", "more"],

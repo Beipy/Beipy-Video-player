@@ -1,7 +1,7 @@
 {{@ lang('copyright')}}
 <div class="beipy-video" {{ if radius }} style="border-radius:{{ radius }}" {{/if}}>
   <video
-    src="https://mvwebfs.ali.kugou.com/202108311614/ebb6e4cf690f84b922f0234e2aa5a76a/KGTX/CLTX002/eab32a130dc384a633735efb4fe11f6a.mp4"></video>
+    src="https://mvwebfs.ali.kugou.com/202109011620/138e5e3395fecbb0c1b7b588c5313ac8/KGTX/CLTX002/eab32a130dc384a633735efb4fe11f6a.mp4"></video>
   {{ if logo }}
   <div class="beipy-video-logo" {{if size=='min' }} style="height: 20px;" {{else if size=='middle' }}
     style="height: 30px;" {{/if}}>

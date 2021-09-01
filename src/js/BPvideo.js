@@ -10,7 +10,7 @@
  * @Date: 2021-08-21 15:05:00
  * @LastEditors: Beipy
  * @FilePath: /Beipy-Video-player/src/js/BPvideo.js
- * @LastEditTime: 2021-08-30 14:49:21
+ * @LastEditTime: 2021-09-01 16:15:05
  */
 
 import { getId } from "./utools";
@@ -21,13 +21,13 @@ export default class BpVideo {
   constructor(opt) {
     this.options = opt;
     this.container = opt.container;
-    this.lang = new I18n(opt.lang).t;
+    this.lang = opt.lang && new I18n(opt.lang).t;
     this.icon = VideoIcon;
-    this.radius = opt.radius;
-    this.utools = opt.utools;
-    this.episode = opt.episode || [];
+    this.radius = opt.radius; //圆角
+    this.utools = opt.utools; //工具栏
+    this.episode = opt.episode || []; //当前播放集数
     this.left = []; //"next", "loop", "live", "time";
-    this.size = "";
+    this.size = ""; //当前播放器规格大小  min middle large
     this.right = [
       "quality",
       "speed",
@@ -56,7 +56,7 @@ export default class BpVideo {
       utools: this.utools,
     });
 
-    this.beipyVideo = this.container.querySelector(".beipy-video"); //当前总盒子
+    this.beipyVideo = this.container.querySelector(".beipy-video"); //当前视频盒子
     this.video = this.container.querySelector("video"); //视频
     this.logo = this.container.querySelector(".beipy-video-logo");
     this.playButton = this.container.querySelector(".play-icon"); //Footer播放按钮图标
