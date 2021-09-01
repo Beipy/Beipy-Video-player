@@ -66,12 +66,22 @@
               </div>
             </div>
             {{lang('quality')}}
-            <div class="tip-title">{{lang('quality')}}</div>
+
+          </div>
+          {{else if $value=='volume'}}
+          <div class="beipy-video-controls-wrap-footer-btn-item beipy-video-tag-bg volume">
+            {{@ icon[$value].html}}
+            <div class="beipy-tipMenu-box">
+              <div class="beipy-Menu">
+                <div class="beipy-Menu-item">
+                  asdfas
+                </div>
+              </div>
+            </div>
           </div>
           {{else if $value=='speed'}}
           <div class="beipy-video-controls-wrap-footer-btn-item beipy-video-tag-bg speed">
             {{lang('speed')}}
-            <div class="tip-title">{{lang('speed')}}</div>
           </div>
 
           {{else}}
